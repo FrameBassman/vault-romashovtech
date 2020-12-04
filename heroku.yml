@@ -7,3 +7,5 @@ build:
     web: ./services/Dummy.Web/Dockerfile
   config:
     ASPNETCORE_ENVIRONMENT: Production
+release:
+  image: web
