@@ -31,7 +31,10 @@ namespace Dummy.Web
                 endpoints.MapGet("/", async context =>
                 {
                     logger.LogInformation($"This is connection string: {Environment.GetEnvironmentVariable("ConnectionString")}");
-                    await context.Response.WriteAsync($"This is connection string: {Environment.GetEnvironmentVariable("ConnectionString")}");
+                    await context.Response.WriteAsync(
+                        $"This is connection string: {Environment.GetEnvironmentVariable("ConnectionString")}\n"
+                        + $"This is DATABASE_URL: {Environment.GetEnvironmentVariable("DATABASE_URL")}"
+                    );
                 });
             });
         }
