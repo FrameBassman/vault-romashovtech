@@ -4,4 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="services\Dummy.Web\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="services\Dummy.Web\appsettings.json" />
+    <_ContentIncludedByDefault Remove="services\Dummy.Web\obj\Debug\netcoreapp3.1\project.razor.json" />
+    <_ContentIncludedByDefault Remove="services\Dummy.Web\Properties\launchSettings.json" />
+  </ItemGroup>
+
 </Project>
