@@ -4,8 +4,6 @@ setup:
       as: DATABASE
 build:
   docker:
-    web: ./services/Dummy.Web/Dockerfile
+    web: Dockerfile
   config:
     ASPNETCORE_ENVIRONMENT: Production
-release:
-  image: web
