@@ -1,0 +1,9 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+build:
+  docker:
+    web: ./services/Dummy.Web/Dockerfile
+  config:
+    ASPNETCORE_ENVIRONMENT: Production
