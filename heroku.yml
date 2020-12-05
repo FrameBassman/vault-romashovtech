@@ -7,3 +7,7 @@ build:
     web: Dockerfile
   config:
     ASPNETCORE_ENVIRONMENT: Production
+release:
+  image: web
+  command:
+    - sed -e "s/%PORT%/$PORT/g" ./static/vault.bak.json > ./static/vault.json
