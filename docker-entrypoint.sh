@@ -1,3 +1,3 @@
 #!/bin/sh
-sed -e "s/%PORT%/$PORT/g" ./static/vault.bak.json > ./static/vault.json
+sed -i.bak "s/%PORT%/$PORT/g" ./static/vault.json
 dotnet Dummy.Web.dll
