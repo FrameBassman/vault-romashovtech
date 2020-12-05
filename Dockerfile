@@ -7,4 +7,5 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1.7-alpine3.12
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "Dummy.Web.dll"]
+ENTRYPOINT dotnet Dummy.Web.dll
+# sed -e "s/%PORT%/$PORT/g" ./static/vault.bak.json > ./static/vault.json
