@@ -1,0 +1,15 @@
+name: Wake up Heroku application
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'  # every day at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Wake up Heroku application
+      run: |
+        curl https://staging-vault-romashovtech.herokuapp.com/ui/
+        curl https://vault-romashovtech.herokuapp.com/ui/
