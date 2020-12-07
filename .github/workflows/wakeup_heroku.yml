@@ -1,0 +1,13 @@
+name: Wake up Heroku application
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'  # every day at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Wake up Heroku application
+      run: echo hi
