@@ -3,7 +3,7 @@ name: Wake up Heroku application
 on:
   push:
   schedule:
-    - cron: '0 * * * *'  # every day at midnight
+    - cron: '0/30 * * * *'  # every 30 minutes
 
 jobs:
   build:
